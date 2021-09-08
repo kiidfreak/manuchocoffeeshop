@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html  style="margin: -8px; z-index: -1; position: relative;" lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Manucho Coffee Kenya</title>
+  <link rel="icon" href="./assets/img/coffee-cup.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/restaurants.css">
+
+  <script src="components/header.js" type="text/javascript" defer></script>
+  <script src="components/footer.js" type="text/javascript" defer></script>
+  <script src="js/main.js"></script>
+  <script src="js/googlemap.js"></script>
+</head>
+<body>
+  <p id="dimensions" style="right:0;position: fixed; z-index: 999999; font-weight: bold; color: red; background-color: yellow;"></p>
+  <!-- <header-component></header-component> -->
+  <div class="content-grid" style="overflow: hidden;">
+            <header class="header">
+      <div class="header_container">
+        <nav class="mainnav">
+          <div class="header-section page-section">
+            <div class="mainnav_container">
+              <div class="Manucho-Logo-container">
+                <a href="index.html">
+                  <img id="logoimg" 
+                    src="assets/img/Vector.png"
+                    class="Manucho-Logo"alt="Burger King logo" />
+                </a>
+              </div>
+              <div class="mainnav_menu">
+                <div class="mainnav_menu_link">
+                    <a href="index.html">
+                      <span style="vertical-align: inherit">Home</span>
+                    </a>
+                </div>
+                <div class="mainnav_menu_link">
+                    <a href="menu.html">
+                      <span style="vertical-align: inherit">Menu</span>
+                    </a>
+                </div>
+                <div class="mainnav_menu_link">
+                    <a href="restaurants.html">
+                      <span style="vertical-align: inherit">Restaurants</span>
+                    </a>
+                </div>
+              </div>
+              <div class="mainnav_mobile-menu-button">
+                <img
+                  onclick="toggleNav()"
+                  id="menu-icon_image"
+                  class="menu-icon_image menu-icon_open"
+                  alt="drop down svg"/>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    
+    <main id="pg-restaurants">
+      <h1 id="restaurants-title">Manucho Restaurants</h1>
+
+
+      <div class="tab">
+        <button id="btn-list-tab" class="tablinks defaultOpen" onclick="switchTab(event, 'restaurant-section-list')">List</button>
+        <button id="btn-map-tab" class="tablinks" onclick="switchTab(event, 'restaurant-section-map')">Map</button>
+      </div>
+      
+      <!-- Tab content -->
+      <section id="restaurant-section-list" class="tabcontent">
+        <div id="restaurant-list-double"></div>
+        <ul id="restaurant-list">
+          <li class="restaurant-list-items"> 
+            <h3 class="restaurant-list-items-title" onclick="openModal('modal-bk-thehubkaren')" data-bk-id="bk-thehubkaren">Waterfront - Karen</h3>
+            <p><img class="restaurant-list-items-location-icon">Waterfront, Upper Ground Floor, Karen</p>
+            <a onclick="showOnMap('bk_thehubkaren')">show on map</a>
+          </li>
+          <li class="restaurant-list-items"> 
+            <h3 class="restaurant-list-items-title" onclick="openModal('modal-bk-nextgen')" data-bk-id="bk-nextgen">Ruiru</h3>
+            <p><img class="restaurant-list-items-location-icon">Near Spur Mall, Thika SuperHighway</p>
+            <a onclick="showOnMap('bk_nextgen')">show on map</a>
+          </li>
+
+          <li class="restaurant-list-items" style="border-top: none;"> 
+          </li>
+        </ul>
+      </section>
+      
+      <section id="restaurant-section-map" class="section-map tabcontent">
+        <div id="map"></div>
+      </section>
+    </main>
+    
+
+<footer>
+      <section class="page-section">
+        <div class="footer-sect-1">
+          <div class="footer-logo">
+            <span style="font-size: 2em;"> MANUCHO</span>
+          </div>
+          <div class="footer-link-list">
+
+            <h3>Information</h3>
+            <div class="footer-social-media-item">
+              <a
+                data-event-label="https://www.facebook.com/kid.freak"
+                href="https://www.facebook.com/ImmanuelMaina"
+                target="_blank"
+                aria-label="social media link"
+                rel="noopener"
+                ><img
+                  src="assets/img/facebook-icon.svg"
+                  alt="social media svg"
+              /></a>
+            </div>
+            <div class="footer-social-media-item">
+              <a
+                data-event-label="https://instagram.com/kid.freak"
+                href="https://instagram.com/ImmanuelMaina"
+                target="_blank"
+                aria-label="social media link"
+                rel="noopener"
+                ><img
+                  src="assets/img/instagram-icon.svg"
+                  alt="social media svg"
+              /></a>
+            </div>
+            <div class="footer-social-media">
+
+            <div class="footer-social-media-item">
+              <a
+                data-event-label="https://twitter.com"
+                href="https://twitter.com"
+                target="_blank"
+                aria-label="social media link"
+                rel="noopener"
+                ><img style="height: 20px;left: 4px;position: relative;" 
+                  src="assets/img/twitter-icon.svg"
+                  alt="social media svg"
+              /></a>
+            </div>
+
+          </div>
+
+          </div>
+        </div>
+        <div class="footer-sect-2">
+          <div class="footer-copyright">
+            <span>All rights reserved.</span>
+          </div>
+
+        </div>
+      </section>
+    </footer>
+  </div>
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script> -->
+  <script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGsZmCb-ePUcEJdMyg2Tb3RsGOZv8L7do&amp;callback=initMap&amp;libraries=&amp;v=weekly"
+  async
+></script>
+</body>
+
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html style="margin: -8px;" lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=350, initial-scale=1.0">
+  <title>Burger King Kenya</title>
+  <link rel="icon" href="./assets/img/coffee-cup.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/menu.css">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WXMQZ743NL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-WXMQZ743NL');
+  </script>
+  <script src="components/header.js" type="text/javascript" defer></script>
+  <script src="components/footer.js" type="text/javascript" defer></script>
+  <script src="js/main.js"></script>
+</head>
+<body>
+  <p id="dimensions" style="right:0;position: fixed; z-index: 999999; font-weight: bold; color: red; background-color: yellow;"></p>
+  <!-- <header-component></header-component> -->
+
+  <div class="content-grid">
+        <header class="header">
+      <div class="header_container">
+        <nav class="mainnav">
+          <div class="header-section page-section">
+            <div class="mainnav_container">
+              <div class="Manucho-Logo-container">
+                <a href="index.html">
+                  <img id="logoimg" 
+                    src="assets/img/Vector.png"
+                    class="Manucho-Logo"alt="Burger King logo" />
+                </a>
+              </div>
+              <div class="mainnav_menu">
+                <div class="mainnav_menu_link">
+                    <a href="index.html">
+                      <span style="vertical-align: inherit">Home</span>
+                    </a>
+                </div>
+                <div class="mainnav_menu_link">
+                    <a href="menu.html">
+                      <span style="vertical-align: inherit">Menu</span>
+                    </a>
+                </div>
+                <div class="mainnav_menu_link">
+                    <a href="restaurants.html">
+                      <span style="vertical-align: inherit">Restaurants</span>
+                    </a>
+                </div>
+              </div>
+              <div class="mainnav_mobile-menu-button">
+                <img
+                  onclick="toggleNav()"
+                  id="menu-icon_image"
+                  class="menu-icon_image menu-icon_open"
+                  alt="drop down svg"/>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    
+    <main id="pg-menu">
+      <div class="menu-grid-wrapper page-section">
+        <section class="menu-sect menu-sect-beef">
+          <div class="menu-sect-title">
+            <h3>Offers</h3>
+          </div>
+          <div class="menu-sect-wrapper">
+            <div class="menu-img-wrapper" onclick="openMenuModal(1)">
+              <img style="height: 180px; width: 200px;" src="assets/img/offers/americanooffer.jpg" alt="">
+              <h4 class="menu-item-label">Americano Offer</h4>
+            </div>
+            <div class="menu-img-wrapper" onclick="openMenuModal(2)">
+              <img style="height: 180px; width: 200px;" src="assets/img/offers/nescafeoffer.jpg" alt="">
+              <h4 class="menu-item-label">Nescafe <span style="color:#d62300;">Vanilla Latte</span></h4>
+            </div>
+            <div class="menu-img-wrapper" onclick="openMenuModal(3)">
+              <img style="height: 180px; width: 200px;" src="assets/img/offers/starbucksoffer.jpg" alt="">
+              <h4 class="menu-item-label">Starbucks</h4>
+            </div>
+          </div>
+        </section>
+
+        <section class="menu-sect menu-sect-kids">
+          <div class="menu-sect-title">
+            <h3>Kids Junkie</h3>
+          </div>
+          <div class="menu-sect-wrapper">
+            <div class="menu-img-wrapper" onclick="openMenuModal(22)">
+              <img style="height: 150px; width: 280px;" src="assets/img/menu/kids_menu/burgerkingcoffee.png" alt="">
+              <h4 class="menu-item-label">Junior Coffee BurgerKIng</h4>
+            </div>
+            <div class="menu-img-wrapper" onclick="openMenuModal(23)">
+              <img style="height: 150px; width: 280px;" src="assets/img/menu/kids_menu/burgerkingcoffee2.jpg" alt="">
+              <h4 class="menu-item-label">BK Cafe Easycoffee</h4>
+            </div>
+            <div class="menu-img-wrapper" onclick="openMenuModal(24)">
+              <img style="height: 150px; width: 280px;" src="assets/img/menu/kids_menu/burgerkingcoffee3.jpg" alt="">
+              <h4 class="menu-item-label">Junior 3 Combo Coffee Pack</h4>
+            </div>
+          </div>
+        </section>
+
+        <section class="menu-sect menu-sect-dessert">
+          <div class="menu-sect-title">
+            <h3>Desserts Coming Soon Here..😉</h3>
+          </div>
+
+        </section>
+
+      </div>
+
+    </main>
+
+    <section id="menu-modal-mask" onclick="removeMenuModal(event, this)">
+      <section class="menu-section-modal menu-detail">
+        <button class="btn-modal-close" onclick="removeMenuModal(event, this)">
+          <img alt="menu details close button" onclick="removeMenuModal(event, this)" />
+        </button>
+        <div class="menu-modal-container">
+          <div class="menu-modal-wrapper">
+            <img src="assets/img/menu/beef_meals/1_whopper.png" alt="">
+            <div class="menu-modal-title-container">
+              <h1 class="menu-modal-title">
+                Whopper
+              </h1>
+            </div>
+            <div class="menu-modal-section-price">
+              <span class="menu-item-type">One cup</span>
+              <span class="menu-item-price">Ksh. 750</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+
+        <footer>
+      <section class="page-section">
+        <div class="footer-sect-1">
+          <div class="footer-logo">
+            <span style="font-size: 2em;"> MANUCHO</span>
+          </div>
+          <div class="footer-link-list">
+
+            <h3>Information</h3>
+            <div class="footer-social-media-item">
+              <a
+                data-event-label="https://www.facebook.com/kid.freak"
+                href="https://www.facebook.com/ImmanuelMaina"
+                target="_blank"
+                aria-label="social media link"
+                rel="noopener"
+                ><img
+                  src="assets/img/facebook-icon.svg"
+                  alt="social media svg"
+              /></a>
+            </div>
+            <div class="footer-social-media-item">
+              <a
+                data-event-label="https://instagram.com/kid.freak"
+                href="https://instagram.com/ImmanuelMaina"
+                target="_blank"
+                aria-label="social media link"
+                rel="noopener"
+                ><img
+                  src="assets/img/instagram-icon.svg"
+                  alt="social media svg"
+              /></a>
+            </div>
+            <div class="footer-social-media">
+
+            <div class="footer-social-media-item">
+              <a
+                data-event-label="https://twitter.com"
+                href="https://twitter.com"
+                target="_blank"
+                aria-label="social media link"
+                rel="noopener"
+                ><img style="height: 20px;left: 4px;position: relative;" 
+                  src="assets/img/twitter-icon.svg"
+                  alt="social media svg"
+              /></a>
+            </div>
+
+          </div>
+
+          </div>
+        </div>
+        <div class="footer-sect-2">
+          <div class="footer-copyright">
+            <span>All rights reserved.</span>
+          </div>
+
+        </div>
+      </section>
+    </footer>
+  </div>
+  <script src="js/menu.js"></script>
+</body>
+
+</html>

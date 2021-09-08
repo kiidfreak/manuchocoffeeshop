@@ -1,0 +1,492 @@
+
+/* removes scrollbar on google maps info window */
+.gm-style-iw-d {
+  margin: -18px;
+}
+
+/* removes the close button on the info window */
+.gm-style-iw button {
+  opacity: 0;
+}
+.gm-style-iw button:hover {
+  opacity: 0;
+  cursor: unset;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 10px 5px 10px #d7c7b5;
+  box-shadow: inset 10px 5px 10px #d7c7b5;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 100px #d62300;
+  box-shadow: inset 0 0 100px #d62300;
+  border-radius: 10px;;
+}
+
+#pg-restaurants {
+  height: calc(100vh - 74px);
+  background-color: #f5ebdc;
+  display: grid;
+
+
+  width: 100%;
+}
+
+
+#restaurant-section-map {
+  position: sticky;
+  /* min-height: calc(100vh - 74px); */
+
+}
+#map {
+  min-height: calc(100vh - 74px - 80px - 60px - 1.5em);
+  /* min-height: 100%; */
+  width: 100%;
+}
+
+#info-content {
+  color: #502314;
+  width: 400px;
+  min-height: 200px;
+  background-color: #f5ebdc;
+  /* border: 3px solid #ebebeb; */
+}
+#info-content h3 {
+  font-size: 1.5em;
+  font-family: Flame-Regular;
+  padding: 20px;
+}
+#info-content img {
+  width: 100%;
+  height: auto;
+  /* border-bottom: 5px solid #ff8732; */
+  margin: -1px;
+}
+#info-content img ~ img {
+  border-top: 5px solid #ff8732;
+}
+#infowindow-title {
+  cursor: pointer;
+}
+#infowindow-title:hover {
+  color: #d62300;
+}
+
+
+
+
+.tab {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  outline: none;
+  border: none;
+  background-color: #f5ebdc;
+  cursor: pointer;
+  font-family: Flame-Regular;
+  font-size: 1.2em;
+  color: #502314;
+  padding: 8px 15px;
+  border-radius: 20px;
+}
+
+.tab button ~ button {
+  margin-left: 1em;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #f0cdbb;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  color: #f5ebdc;
+  background-color: #d62300;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+}
+
+#restaurants-title {
+  font-family: Flame-Regular;
+  font-size: 1.5em;
+  background-color: #ff8732;
+  color: #f5ebdc;
+  padding: 30px;
+}
+
+
+#restaurant-section-list {
+  overflow-y: scroll;
+  min-height: 400px;
+  height: 100%;
+}
+
+footer {
+  display: none;
+}
+
+.restaurant-list-items {
+  margin: 0.5em 0;
+  padding: 20px;
+}
+.restaurant-list-items ~ .restaurant-list-items {
+  border-top: 3px solid #d7c7b5;
+}
+
+.restaurant-list-items-title {
+  color: #502314;
+  font-family: Flame-Regular;
+  font-size: 1.3em;
+  cursor: pointer;
+}
+.restaurant-list-items-title:hover {
+  color: #d62300;
+  font-family: Flame-Regular;
+}
+.restaurant-list-items-location-icon {
+  height: 15px;
+  width: auto;
+  margin-right: 7px;
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='14px' height='20px' viewBox='0 0 14 20' version='1.1'%3E%3C!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch --%3E%3Ctitle%3Elocation_on%3C/title%3E%3Cdesc%3ECreated with Sketch.%3C/desc%3E%3Cg id='Icons' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cg id='Rounded' transform='translate(-377.000000, -1306.000000)'%3E%3Cg id='Communication' transform='translate(100.000000, 1162.000000)'%3E%3Cg id='-Round-/-Communication-/-location_on' transform='translate(272.000000, 142.000000)'%3E%3Cg%3E%3Cpolygon id='Path' points='0 0 24 0 24 24 0 24'/%3E%3Cpath d='M12,2 C8.13,2 5,5.13 5,9 C5,13.17 9.42,18.92 11.24,21.11 C11.64,21.59 12.37,21.59 12.77,21.11 C14.58,18.92 19,13.17 19,9 C19,5.13 15.87,2 12,2 Z M12,11.5 C10.62,11.5 9.5,10.38 9.5,9 C9.5,7.62 10.62,6.5 12,6.5 C13.38,6.5 14.5,7.62 14.5,9 C14.5,10.38 13.38,11.5 12,11.5 Z' fill='%23502314'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.restaurant-list-items * {
+  padding: 0.5em 0;
+}
+.restaurant-list-items p {
+  font-family: Flame-Sans;
+  color: #502314;
+  display: flex;
+  align-items: center;
+}
+.restaurant-list-items a {
+  font-family: Flame-Sans;
+  color: #ff8732;
+  cursor: pointer;
+}
+
+
+fakerulexxx {
+
+}
+.venue {
+  display: none;
+}
+#restaurant-modal-mask {
+  position: fixed;
+  display: none;
+  justify-content: center;
+  background-color: #000;
+  background:rgba(0, 0, 0, 0.7);
+  height: 100%;
+  width: 100%;
+  z-index: 999;
+}
+.restaurant-section-modal {
+  position: fixed;
+  /* display: none; */
+  /* top: 74px; */
+  background-color: #f5ebdc;
+  /* min-height: 100vh;
+  min-width: 100vh; */
+  height: 100%;
+  width: 100%;
+  /* padding: 15px; */
+  overflow-y: scroll;
+  z-index: 999;
+}
+.btn-modal-close {
+  position: fixed;
+  /* top: 89px; */
+  top: 15px;
+  left: 15px;
+  background-color: #d62300;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-modal-close:hover {
+  background-color: #a71b00;
+}
+.btn-modal-close img {
+  /* width: 50px;
+  height: auto; */
+  width: 20px;
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='20'%3E%3Cg%3E%3Ctitle%3Ebackground%3C/title%3E%3Crect fill='none' id='canvas_background' height='22' width='30' y='-1' x='-1'/%3E%3C/g%3E%3Cg%3E%3Ctitle%3ELayer 1%3C/title%3E%3Cpath id='svg_1' fill='%23f5ebdc' d='m26.00715,8.02145l-19.2,0l4.62,-4.62c0.394,-0.394 0.58,-0.864 0.58,-1.38c0,-0.984 -0.813,-2 -2,-2c-0.531,0 -0.994,0.193 -1.38,0.58l-7.958,7.958c-0.328,0.328 -0.662,0.733 -0.662,1.462s0.279,1.08 0.646,1.447l7.974,7.973c0.386,0.387 0.849,0.58 1.38,0.58c1.188,0 2,-1.016 2,-2c0,-0.516 -0.186,-0.986 -0.58,-1.38l-4.62,-4.62l19.2,0c1.104,0 2,-0.896 2,-2s-0.896,-2 -2,-2z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.venue-modal-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+.venue-modal-wrapper {
+  max-width: 600px;
+  width: 100%;
+  display: grid;
+  gap: 25px;
+  color: #502314;
+  font-family: Flame-Sans;
+  grid-template-columns: 1fr;
+  /* grid-template-rows: 1fr 1fr 1fr 2fr 1fr 4fr 4fr; */
+}
+.venue-modal-wrapper>* ~ * {
+  margin-top: 2em;
+}
+.venue-modal-wrapper h3 {
+  font-family: Flame-Regular;
+  font-size: 1.2em;
+}
+.venue-modal-wrapper a {
+  outline: none;
+  border: none;
+  background-color: #d62300;
+  color: #f5ebdc;
+  cursor: pointer;
+  font-family: Flame-Regular;
+  font-size: 1em;
+  padding: 8px 15px;
+  border-radius: 20px;
+}
+.venue-modal-wrapper a:hover {
+  background-color: #a71b00;
+}
+.venue-modal-wrapper svg {
+  margin-right: 10px;
+}
+
+.restaurant-modal-title {
+  /* justify-self: center; */
+  font-family: Flame-Regular;
+  color: #502314;
+  font-size: 1.7em;
+  margin-top: 50px;
+}
+.restaurant-modal-address {
+  display: grid;
+  align-items: center;
+  gap: 20px;
+  grid-template-areas: 
+  "title btn"
+  "details btn"
+}
+.restaurant-modal-address h3 {
+  grid-area: title;
+}
+.restaurant-modal-address p {
+  grid-area: details;
+  font-family: Flame-Sans;
+}
+.restaurant-modal-address .btn-container {
+  grid-area: btn;
+  justify-self: right;
+  align-self: center;
+}
+
+.restaurant-modal-phone {
+  display: grid;
+  align-items: center;
+  grid-template-areas: 
+  "title btn"
+}
+.restaurant-modal-phone h3 {
+  grid-area: title;
+}
+.restaurant-modal-phone .btn-container {
+  grid-area: btn;
+  justify-self: right;
+}
+
+.restaurant-modal-waystoorder {
+  display: grid;
+  align-items: center;
+  gap: 20px;
+
+}
+/* .restaurant-modal-waystoorder h3 {
+  grid-area: title;
+}
+.restaurant-modal-waystoorder .restaurant-modal-waystoorder-drivethru {
+  grid-area: way1;
+}
+.restaurant-modal-waystoorder .restaurant-modal-waystoorder-phone {
+  grid-area: way2;
+}
+.restaurant-modal-waystoorder .restaurant-modal-waystoorder-delivery {
+  grid-area: way3;
+} */
+.restaurant-modal-waystoorder svg {
+  width: 30px;
+}
+
+.restaurant-modal-waystoorder-delivery {
+  display: flex;
+  align-items: center;
+}
+a.restaurant-modal-waystoorder-delivery-btn {
+  background-color: #f5ebdc;
+  border: 2px solid #d62300;
+  position: relative;
+  right: 0;
+}
+a.restaurant-modal-waystoorder-delivery-btn:first-of-type {
+  margin-left: auto;
+}
+a.restaurant-modal-waystoorder-delivery-btn ~ a.restaurant-modal-waystoorder-delivery-btn {
+  margin-left: 10px;
+}
+a.restaurant-modal-waystoorder-delivery-btn:hover {
+  background-color: #f0cdbb;
+}
+.restaurant-modal-waystoorder-delivery-btn img {
+  height: 20px;
+  width: auto;
+}
+
+
+.restaurant-modal-services {
+  display: grid;
+  align-items: center;
+  gap: 20px;
+}
+.restaurant-modal-services svg {
+  height: 25px;
+  width: 30px;
+}
+.restaurant-modal-services .svg-wifi {
+  height: 20px;
+}
+
+
+.restaurant-modal-dineinhours {
+  display: grid;
+  gap: 15px;
+  align-items: center;
+  grid-template-rows: repeat(8, 1fr);
+  font-family: Flame-Sans;
+}
+.restaurant-modal-dineinhours .restaurant-modal-daytimerow {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.restaurant-modal-dineinhours .restaurant-modal-times {
+  justify-self: right;
+}
+
+.restaurant-modal-drivethruhours {
+  display: grid;
+  gap: 15px;
+  align-items: center;
+  grid-template-rows: repeat(8, 1fr);
+  font-family: Flame-Sans;
+}
+.restaurant-modal-drivethruhours .restaurant-modal-daytimerow {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.restaurant-modal-drivethruhours .restaurant-modal-times {
+  justify-self: right;
+}
+
+
+@media screen and (min-width: 650px) {
+  #pg-restaurants {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: 
+        "title map"
+        "list map";
+    position: fixed;
+    bottom: 0;
+    top: 74px;
+  }
+  #map {
+    min-height: calc(100vh - 74px);
+    /* min-height: 100%; */
+  }
+  .tab {
+    display: none;
+  }
+  #restaurant-section-map {
+    display: block;
+    grid-area: map;
+  }
+  #restaurants-title {
+    grid-area: title;
+  }
+  #restaurant-section-list {
+    display: block;
+    grid-area: list;
+    min-height: calc(100vh - 74px - 60px);
+  }
+}
+
+fakerulexxx {
+
+}
+@media screen and (min-width: 900px) {
+  .restaurant-section-modal {
+    position: absolute;
+    align-self: center;
+    height: 400px;
+    width: 700px;
+    overflow-y: scroll;
+    border-radius: 10px;
+  }
+  .btn-modal-close {
+    position: sticky;
+    top: 20px;
+    left: 20px;
+  }
+  .btn-modal-close img {
+    width: 20px;
+    content: url("data:image/svg+xml,%3Csvg fill='none' height='24' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='4' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cline style='stroke:%23f5ebdc;' x1='18' x2='6' y1='6' y2='18'/%3E%3Cline style='stroke:%23f5ebdc;' x1='6' x2='18' y1='6' y2='18'/%3E%3C/svg%3E");
+  }
+}
+
+
+
+
+@media screen and (min-width: 992px) {
+  #pg-restaurants {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: 
+        "title map map"
+        "list map map"
+  }
+  .tab {
+    display: none;
+  }
+  #restaurant-section-map {
+    display: block;
+    grid-area: map;
+  }
+  #restaurants-title {
+    grid-area: title;
+  }
+  #restaurant-section-list {
+    display: block;
+    grid-area: list;
+  }
+}

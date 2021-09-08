@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html style="margin: -8px;"lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=350, initial-scale=1.0">
+  <link rel="icon" href="./assets/img/coffee-cup.png">
+  <title>Manucho Coffee Kenya</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="components/header.js" type="text/javascript" defer></script>
+  <script src="components/footer.js" type="text/javascript" defer></script>
+
+</head>
+<body>
+
+  <div class="content-grid">
+    <header class="header">
+      <div class="header_container">
+        <nav class="mainnav">
+          <div class="header-section page-section">
+            <div class="mainnav_container">
+              <div class="Manucho-Logo-container">
+                <a href="index.html">
+                  <img id="logoimg" 
+                    src="assets/img/Vector.png"
+                    class="Manucho-Logo"alt="Burger King logo" />
+                </a>
+              </div>
+              <div class="mainnav_menu">
+                <div class="mainnav_menu_link">
+                    <a href="index.html">
+                      <span style="vertical-align: inherit">Home</span>
+                    </a>
+                </div>
+                <div class="mainnav_menu_link">
+                    <a href="menu.html">
+                      <span style="vertical-align: inherit">Menu</span>
+                    </a>
+                </div>
+                <div class="mainnav_menu_link">
+                    <a href="restaurants.html">
+                      <span style="vertical-align: inherit">Restaurants</span>
+                    </a>
+                </div>
+              </div>
+              <div class="mainnav_mobile-menu-button">
+                <img
+                  onclick="toggleNav()"
+                  id="menu-icon_image"
+                  class="menu-icon_image menu-icon_open"
+                  alt="drop down svg"/>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    
+    <main>
+      <div class="home-wrapper">
+        <section class="hero">
+          <div class="hero-section page-section">
+            <img class="hero-img" src="assets/img/hero_image2.png" alt="">
+            <h1 class="hero-title">Home of the Roasters</h1>
+            <a class="btn-hero-item" href="menu.html">Check out our menu</a>
+          </div>
+        </section>
+
+        <section class="section-offers">
+          <div class="page-section">
+            <h1 class="section-header section-offers-header">Offers <span class="section-header-more"><a href="menu.html">See more</a></span></h1>
+            <div class="offers-container">
+              <div class="offer-item"><img onclick="gotoOffer('2103251')" src="assets/img/offers/starbucksoffer.jpg" alt=""></div>
+              <div class="offer-item"><img onclick="gotoOffer('2103252')" src="assets/img/offers/americanooffer.jpg" alt=""></div>
+              <div class="offer-item"><img onclick="gotoOffer('2105291')" src="assets/img/offers/nescafeoffer.jpg" alt=""></div>
+            </div>
+          </div>
+        </section>
+        
+        <section class="section-delivery">
+          <div class="page-section section-delivery-page-section">
+            <div class="section-delivery-container">
+              <div class="section-delivery-header-container">
+                <h1 class="section-header section-delivery-header">Delivery</h1>
+
+
+                <p class="home-subtext">Order Manucho Products through:</p>
+              </div>
+              <div class="section-delivery-ubereats">
+                <button class="section-delivery-pill">
+                  <img style="height: 100px;width: 100px;" src="assets/img/ubereatslogo.png" alt="">
+                </button>
+                <span class="home-subtext">Uber Eats</span>
+              </div>
+
+
+              <div class="section-delivery-jumiafood">
+                <button class="section-delivery-pill">
+                  <img src="assets/img/jumia-food.png" alt="">
+                </button>
+                <span class="home-subtext">Jumia Food</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <section class="page-section">
+        <div class="footer-sect-1">
+          <div class="footer-logo">
+            <span style="font-size: 2em;"> MANUCHO</span>
+          </div>
+          <div class="footer-link-list">
+
+            <h3>Information</h3>
+            <div class="footer-social-media-item">
+              <a
+                data-event-label="https://www.facebook.com/kid.freak"
+                href="https://www.facebook.com/ImmanuelMaina"
+                target="_blank"
+                aria-label="social media link"
+                rel="noopener"
+                ><img
+                  src="assets/img/facebook-icon.svg"
+                  alt="social media svg"
+              /></a>
+            </div>
+            <div class="footer-social-media-item">
+              <a
+                data-event-label="https://instagram.com/kid.freak"
+                href="https://instagram.com/ImmanuelMaina"
+                target="_blank"
+                aria-label="social media link"
+                rel="noopener"
+                ><img
+                  src="assets/img/instagram-icon.svg"
+                  alt="social media svg"
+              /></a>
+            </div>
+            <div class="footer-social-media">
+
+            <div class="footer-social-media-item">
+              <a
+                data-event-label="https://twitter.com"
+                href="https://twitter.com"
+                target="_blank"
+                aria-label="social media link"
+                rel="noopener"
+                ><img style="height: 20px;left: 4px;position: relative;" 
+                  src="assets/img/twitter-icon.svg"
+                  alt="social media svg"
+              /></a>
+            </div>
+
+          </div>
+
+          </div>
+        </div>
+        <div class="footer-sect-2">
+          <div class="footer-copyright">
+            <span>All rights reserved.</span>
+          </div>
+
+        </div>
+      </section>
+    </footer>
+  </div>
+
+<script src="js/main.js"></script>
+
+</body>
+
+</html>
